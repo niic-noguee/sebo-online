@@ -1,0 +1,52 @@
+body { 
+    font-family: sans-serif; 
+    margin: 0; 
+    background-color: #f4f4f4; 
+}
+header { 
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 1rem 0; 
+}
+main { 
+    max-width: 1200px; 
+    margin: 2rem auto; 
+    padding: 0 1rem; 
+}
+.container { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 1.5rem; 
+    justify-content: center; 
+}
+.livro-card { 
+    background-color: white; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    width: 220px; 
+    text-align: center; 
+    padding: 1rem; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+.livro-card img { 
+    max-width: 150px; 
+    height: auto; 
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 1rem; 
+    margin-bottom: 1rem; 
+}
+.livro-card h3 { 
+    font-size: 1.1em; 
+    margin: 0.5rem 0; 
+}
+.livro-card .autor { 
+    font-size: 0.9em; 
+    color: #666; 
+}
+.livro-card .preco { 
+    font-size: 1.2em; 
+    font-weight: bold; 
+    color: #27ae60; 
+    margin-top: 1rem; 
+}
