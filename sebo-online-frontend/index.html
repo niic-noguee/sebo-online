@@ -7,24 +7,109 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- favicon -->
-     <link rel="icon" type="image/png" href="/assets/image/5.png">
+     <link rel="icon" type="image/png" href="/assets/images/logos/5.png">
 </head>
 <body>
-    <header>
-        <h1>Sepulcro Literário</h1>
-        <h2>Sebo online</h2>
-        <p>Livros usados com os melhores preços</p>
+    <!----------------- Cabeçalho ---------------------->
+    <header class="main-header">
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logos/1.png" alt="Logo Sepulcro Literário" class="logo-img">
+            </a>
 
-        <!-- adicionar categorias, mais vendidos, barra de pesquisa -->
+            <form class="search-bar">
+                <input type="search" placeholder="O que você está procurando?">
+                <button type="submit">🔍</button>
+            </form>
+
+            <nav class="user-nav">
+                <a href="#">Minhas listas</a>
+                <a href="#">Entrar</a>
+                <a href="#">🛒</a>
+            </nav>
+        </div>
+        
+        <nav class="categories-nav">
+             <a href="#">Categorias</a>
+             <a href="#">Mais Vendidos</a>
+             <a href="#">Principais Autores</a>
+             <a href="#">Dicas de Livros</a>
+        </nav>
     </header>
 
     <main>
-        <h2>Livros Disponíveis</h2>
-        <div id="livros-container" class="container">
-        </div>
+        <!----------------- Universos Literários ---------------------->
+        <section id="universos-literarios">
+            <h2>Universos Literários</h2>
+            <div class="scrolling-wrapper">
+                <div class="universo-card">
+                    <img src="assets/images/universos-literarios/" alt="Universo Literário 1">
+                    <p>Harry Potter</p>
+                </div>
+                <div class="universo-card">
+                    <img src="assets/images/universos-literarios/" alt="Universo Literário 2">
+                    <p>O Guia do Mochileiro Das Galáxias</p>
+                </div>
+                <div class="universo-card">
+                    <img src="assets/images/universos-literarios/" alt="Universo Literário 3">
+                    <p>O Tempo e o Vento</p>
+                </div>
+                <div class="universo-card">
+                    <img src="assets/images/universos-literarios/" alt="Universo Literário 4">
+                    <p>O Senhor dos Anéis</p>
+                </div>
+                <div class="universo-card">
+                    <img src="assets/images/universos-literarios/" alt="Universo Literário 5">
+                    <p>Percy Jackson</p>
+                </div>
+                 <div class="universo-card">
+                    <img src="assets/images/universos-literarios/" alt="Universo Literário 6">
+                    <p>As Crônicas de Nárnia</p>
+                </div>
+            </div>
+        </section>
 
-        <!-- adicionar barracas, autores, universos literários  -->
+        <!----------------- Barracas ---------------------->
+        <section id="barracas-literarias">
+             <h2>Descubra novas histórias</h2>
+             <div class="container">
+                <div class="barraca-card">
+                    <img src="assets/images/barracas/" alt="Barraca do Outro Mundo">
+                </div>
+                 <div class="barraca-card">
+                    <img src="assets/images/barracas/" alt="Barraca dos Livrinhos">
+                </div>
+                 <div class="barraca-card">
+                    <img src="assets/images/barracas/" alt="Barraca do Beijo">
+                </div>
+             </div>
+        </section>
+
+        <!----------------- Autores ---------------------->
+        <section id="autores">
+            <h2>Navegue por Autores</h2>
+            <div class="autores-list">
+                <a href="#">Machado de Assis</a>
+                <a href="#">Clarice Lispector</a>
+                <a href="#">Jorge Amado</a>
+                <a href="#">Graciliano Ramos</a>
+                <a href="#">Cecília Meireles</a>
+                <a href="#">Carlos Drummond de Andrade</a>
+            </div>
+        </section>
+
+        <!----------------- Todos os livros ---------------------->
+        <section id="catalogo">
+            <h2>Livros Disponíveis</h2>
+            <div id="livros-container" class="container">
+                </div>
+        </section>
     </main>
+    
+    <!----------------- Rodapé ---------------------->
+    <footer class="main-footer">
+        <p>Sepulcro Literário.</p>
+    </footer>
 
     <script src="assets/js/app.js"></script>
 </body>
