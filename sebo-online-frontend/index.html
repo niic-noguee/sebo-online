@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- favicon -->
-     <link rel="icon" type="image/png" href="/assets/images/logos/5.png">
+     <link rel="icon" type="image/png" href="assets/images/logos/5.png">
 </head>
 <body>
     <!----------------- Cabeçalho ---------------------->
@@ -23,16 +23,38 @@
             </form>
 
             <nav class="user-nav">
-                <a href="#">Minhas listas</a>
+                <a href="#">Favoritos</a>
                 <a href="#">Entrar</a>
                 <a href="#">🛒</a>
             </nav>
         </div>
         
         <nav class="categories-nav">
-             <a href="#">Categorias</a>
+            <div class="dropdown">
+                <button class="dropdown-btn">Categorias</button>
+                <div class="dropdown-content">
+                    <a href="#">Ficção Científica</a>
+                    <a href="#">Fantasia</a>
+                    <a href="#">Romance</a>
+                    <a href="#">Biografia</a>
+                    <a href="#">Terror</a>
+                </div>
+            </div>
+
              <a href="#">Mais Vendidos</a>
-             <a href="#">Principais Autores</a>
+             
+             <div class="dropdown">
+                <button class="dropdown-btn">Principais Autores</button>
+                <div class="dropdown-content">
+                    <a href="#">Carolina Maria de Jesus</a>
+                    <a href="#">Liev Tolstói</a>
+                    <a href="#">Fiódor Dostoiévski</a>
+                    <a href="#">Franz Kafka</a>
+                    <a href="#">Jorge Amado</a>
+                    <a href="#">Clarice Lispector</a>
+                </div>
+            </div>
+
              <a href="#">Dicas de Livros</a>
         </nav>
     </header>
@@ -43,28 +65,36 @@
             <h2>Universos Literários</h2>
             <div class="scrolling-wrapper">
                 <div class="universo-card">
-                    <img src="assets/images/universos-literarios/" alt="Universo Literário 1">
+                    <img src="assets/images/universos-literarios/harry_potter.jpg" alt="Universo Literário 1">
                     <p>Harry Potter</p>
                 </div>
                 <div class="universo-card">
-                    <img src="assets/images/universos-literarios/" alt="Universo Literário 2">
+                    <img src="assets/images/universos-literarios/mochileiro.webp" alt="Universo Literário 2">
                     <p>O Guia do Mochileiro Das Galáxias</p>
                 </div>
                 <div class="universo-card">
-                    <img src="assets/images/universos-literarios/" alt="Universo Literário 3">
-                    <p>O Tempo e o Vento</p>
+                    <img src="assets/images/universos-literarios/biblia.jpg" alt="Universo Literário 3">
+                    <p>bíblia sagrada</p>
                 </div>
                 <div class="universo-card">
-                    <img src="assets/images/universos-literarios/" alt="Universo Literário 4">
+                    <img src="assets/images/universos-literarios/senhor_dos_aneis.jpg" alt="Universo Literário 4">
                     <p>O Senhor dos Anéis</p>
                 </div>
                 <div class="universo-card">
-                    <img src="assets/images/universos-literarios/" alt="Universo Literário 5">
+                    <img src="assets/images/universos-literarios/pj.jpg" alt="Universo Literário 5">
                     <p>Percy Jackson</p>
                 </div>
-                 <div class="universo-card">
-                    <img src="assets/images/universos-literarios/" alt="Universo Literário 6">
+                <div class="universo-card">
+                    <img src="assets/images/universos-literarios/aslan.jpg" alt="Universo Literário 6">
                     <p>As Crônicas de Nárnia</p>
+                </div>
+                <div class="universo-card">
+                    <img src="assets/images/universos-literarios/jogos_vorazes.jpg" alt="Universo Literário 6">
+                    <p>Jogos Vorazes</p>
+                </div>
+                <div class="universo-card">
+                    <img src="assets/images/universos-literarios/desventuras.jpg" alt="Universo Literário 6">
+                    <p>Desventuras em Série</p>
                 </div>
             </div>
         </section>
@@ -74,13 +104,13 @@
              <h2>Descubra novas histórias</h2>
              <div class="container">
                 <div class="barraca-card">
-                    <img src="assets/images/barracas/" alt="Barraca do Outro Mundo">
+                    <img src="assets/images/barracas/outro_mundo.png" alt="Barraca de Outro Mundo">
                 </div>
                  <div class="barraca-card">
-                    <img src="assets/images/barracas/" alt="Barraca dos Livrinhos">
+                    <img src="assets/images/barracas/livrinhos.png" alt="Barraca dos Livrinhos">
                 </div>
                  <div class="barraca-card">
-                    <img src="assets/images/barracas/" alt="Barraca do Beijo">
+                    <img src="assets/images/barracas/beijo.png" alt="Barraca do Beijo">
                 </div>
              </div>
         </section>
@@ -93,8 +123,8 @@
                 <a href="#">Clarice Lispector</a>
                 <a href="#">Jorge Amado</a>
                 <a href="#">Graciliano Ramos</a>
-                <a href="#">Cecília Meireles</a>
-                <a href="#">Carlos Drummond de Andrade</a>
+                <a href="#">Carolina Maria de Jesus</a>
+                <a href="#">Lima Barreto</a>
             </div>
         </section>
 
