@@ -1,5 +1,18 @@
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*.env
-.env
+# Arquivos de log e cache do sistema
+.DS_Store
+*.log
+*.log*
+
+# Arquivos gerados pelo Gradle e Java/Kotlin
+.gradle/
+build/
+*.jar
+*.war
+
+# Arquivos de configuração de IDEs
+.idea/
+.vscode/
+*.iml
+
+# Arquivos do sistema operacional
+Thumbs.db

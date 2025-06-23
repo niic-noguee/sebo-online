@@ -1,39 +1,45 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const apiUrl = 'http://localhost:8080/api/livros'; 
     const livrosContainer = document.getElementById('livros-container');
-    const apiUrl = 'http://localhost:3000/api/livros'; 
 
-    // Buscar livros 
+    // Buscar livros
     async function fetchLivros() {
         try {
             const response = await fetch(apiUrl);
             if (!response.ok) {
-                throw new Error('Erro ao buscar os dados da API.');
+                throw new Error('Erro ao buscar livros.');
             }
-            const data = await response.json();
-            displayLivros(data.data);
+            const data = await response.json(); 
+            displayLivros(data); 
         } catch (error) {
-            livrosContainer.innerHTML = `<p>${error.message}</p>`;
+            livrosContainer.innerHTML = `<p>Não foi possível carregar os livros. Verifique se o back-end está rodando.</p>`;
             console.error('Falha na requisição:', error);
         }
     }
 
-    // Exibir livros 
+    // Criar e mostrar os cards dos livros no HTML
     function displayLivros(livros) {
+        if (!Array.isArray(livros)) {
+            console.error("Erro: A resposta da API não é um array.", livros);
+            livrosContainer.innerHTML = '<p>Erro ao processar os dados dos livros.</p>';
+            return;
+        }
+
         if (livros.length === 0) {
             livrosContainer.innerHTML = '<p>Nenhum livro encontrado.</p>';
             return;
         }
 
-        livrosContainer.innerHTML = ''; 
+        livrosContainer.innerHTML = '';
 
         livros.forEach(livro => {
             const livroCard = document.createElement('div');
             livroCard.className = 'livro-card';
-            // Lembrar de fazer página para quando clicar no card redirecionar para uma página de detalhes
+            
             livroCard.innerHTML = `
-                <img src="${livro.url_capa}" alt="Capa do livro ${livro.titulo}">
+                <img src="${livro.urlCapa}" alt="Capa do livro ${livro.titulo}">
                 <h3>${livro.titulo}</h3>
-                <p class="autor">${livro.autor_nome}</p>
+                <p class="autor">${livro.autor.nome}</p> 
                 <p class="preco">R$ ${Number(livro.preco).toFixed(2)}</p>
             `;
             livrosContainer.appendChild(livroCard);
