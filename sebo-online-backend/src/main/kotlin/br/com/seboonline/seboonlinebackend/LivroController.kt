@@ -19,12 +19,4 @@ class LivroController(private val livroRepository: LivroRepository) {
     fun buscarLivros(@RequestParam termo: String): List<Livro> {
         return livroRepository.findByTituloContainingIgnoreCase(termo)
     }
-
-    // Buscar livros por id
-    @GetMapping("/{id}")
-    fun buscarLivroPorId(@PathVariable id: Long): ResponseEntity<Livro> {
-        return livroRepository.findById(id)
-            .map { livro -> ResponseEntity.ok(livro) }
-            .orElse(ResponseEntity.notFound().build())
-    }
 }
