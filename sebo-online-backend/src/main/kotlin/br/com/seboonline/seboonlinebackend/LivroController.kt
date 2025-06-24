@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/livros")
-@CrossOrigin(origins = ["*"]) 
+@CrossOrigin(origins = ["*"])
 class LivroController(private val livroRepository: LivroRepository) {
 
     // Listar todos os livros
@@ -14,7 +14,13 @@ class LivroController(private val livroRepository: LivroRepository) {
         return livroRepository.findAll()
     }
 
-    // Buscar um livro por ID
+    // Buscar livros por título
+    @GetMapping("/buscar")
+    fun buscarLivros(@RequestParam termo: String): List<Livro> {
+        return livroRepository.findByTituloContainingIgnoreCase(termo)
+    }
+
+    // Buscar livros por id
     @GetMapping("/{id}")
     fun buscarLivroPorId(@PathVariable id: Long): ResponseEntity<Livro> {
         return livroRepository.findById(id)
